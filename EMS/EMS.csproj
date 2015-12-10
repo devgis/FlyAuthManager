@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{396BEC7C-EDE0-4BDF-94A9-5151ED312EF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMS</RootNamespace>
+    <AssemblyName>EMS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChgPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChgPwd.Designer.cs">
+      <DependentUpon>ChgPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cs\EMSDS.cs">
+      <DependentUpon>EMSDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cs\EMSDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs\SplashAppContext.cs" />
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChgPwd.resx">
+      <DependentUpon>ChgPwd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.resx">
+      <DependentUpon>start.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="人员管理\PerEd.resx">
+      <DependentUpon>PerEd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="人员管理\PerIn.resx">
+      <DependentUpon>PerIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="人员管理\PerSe.resx">
+      <DependentUpon>PerSe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\BasDep.resx">
+      <DependentUpon>BasDep.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\EquLog.resx">
+      <DependentUpon>EquLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\EquSpc.resx">
+      <DependentUpon>EquSpc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\EquTyp.resx">
+      <DependentUpon>EquTyp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础资料\EquUse.resx">
+      <DependentUpon>EquUse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表管理\rpt\固定资产使用登记表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>固定资产使用登记表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表管理\rpt\清查明细表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>清查明细表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表管理\固定资产使用登记报表.resx">
+      <DependentUpon>固定资产使用登记报表.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报表管理\清查明细表.resx">
+      <DependentUpon>清查明细表.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="租赁管理\EquLe.resx">
+      <DependentUpon>EquLe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="租赁管理\EquLog.resx">
+      <DependentUpon>EquLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="租赁管理\EquRe.resx">
+      <DependentUpon>EquRe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="租赁管理\EquSt.resx">
+      <DependentUpon>EquSt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设备管理\DeLog.resx">
+      <DependentUpon>DeLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设备管理\EquDe.resx">
+      <DependentUpon>EquDe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设备管理\EquEd.resx">
+      <DependentUpon>EquEd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设备管理\EquIn.resx">
+      <DependentUpon>EquIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设备管理\EquSe.resx">
+      <DependentUpon>EquSe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start.Designer.cs">
+      <DependentUpon>start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="人员管理\PerEd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="人员管理\PerEd.Designer.cs">
+      <DependentUpon>PerEd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="人员管理\PerIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="人员管理\PerIn.Designer.cs">
+      <DependentUpon>PerIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="人员管理\PerSe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="人员管理\PerSe.Designer.cs">
+      <DependentUpon>PerSe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\BasDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\BasDep.Designer.cs">
+      <DependentUpon>BasDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\EquLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\EquLog.Designer.cs">
+      <DependentUpon>EquLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\EquSpc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\EquSpc.Designer.cs">
+      <DependentUpon>EquSpc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\EquTyp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\EquTyp.Designer.cs">
+      <DependentUpon>EquTyp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础资料\EquUse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础资料\EquUse.Designer.cs">
+      <DependentUpon>EquUse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表管理\rpt\固定资产使用登记表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>固定资产使用登记表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="报表管理\rpt\清查明细表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>清查明细表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="报表管理\固定资产使用登记报表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表管理\固定资产使用登记报表.Designer.cs">
+      <DependentUpon>固定资产使用登记报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="报表管理\清查明细表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="报表管理\清查明细表.Designer.cs">
+      <DependentUpon>清查明细表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="租赁管理\EquLe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="租赁管理\EquLe.Designer.cs">
+      <DependentUpon>EquLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="租赁管理\EquLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="租赁管理\EquLog.Designer.cs">
+      <DependentUpon>EquLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="租赁管理\EquRe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="租赁管理\EquRe.Designer.cs">
+      <DependentUpon>EquRe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="租赁管理\EquSt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="租赁管理\EquSt.Designer.cs">
+      <DependentUpon>EquSt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设备管理\DeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设备管理\DeLog.Designer.cs">
+      <DependentUpon>DeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设备管理\EquDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设备管理\EquDe.Designer.cs">
+      <DependentUpon>EquDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设备管理\EquEd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设备管理\EquEd.Designer.cs">
+      <DependentUpon>EquEd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设备管理\EquIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设备管理\EquIn.Designer.cs">
+      <DependentUpon>EquIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设备管理\EquSe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设备管理\EquSe.Designer.cs">
+      <DependentUpon>EquSe.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\authmanager\authmanager.csproj">
+      <Project>{5AAEAAA1-D5E4-4EB5-B1D7-6F964324CA92}</Project>
+      <Name>authmanager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlyLib\FlyLib.csproj">
+      <Project>{B78096AB-3AF7-4B6C-85E1-EBBFF615DEC9}</Project>
+      <Name>FlyLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="cs\EMSDS.xsc">
+      <DependentUpon>EMSDS.xsd</DependentUpon>
+    </None>
+    <None Include="cs\EMSDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMSDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="cs\EMSDS.xss">
+      <DependentUpon>EMSDS.xsd</DependentUpon>
+    </None>
+    <None Include="cs\Resources\01.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

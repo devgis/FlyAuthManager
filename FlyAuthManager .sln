@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS", "EMS\EMS.csproj", "{396BEC7C-EDE0-4BDF-94A9-5151ED312EF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "authmanager", "authmanager\authmanager.csproj", "{5AAEAAA1-D5E4-4EB5-B1D7-6F964324CA92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyLib", "FlyLib\FlyLib.csproj", "{B78096AB-3AF7-4B6C-85E1-EBBFF615DEC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{396BEC7C-EDE0-4BDF-94A9-5151ED312EF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396BEC7C-EDE0-4BDF-94A9-5151ED312EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396BEC7C-EDE0-4BDF-94A9-5151ED312EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396BEC7C-EDE0-4BDF-94A9-5151ED312EF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAEAAA1-D5E4-4EB5-B1D7-6F964324CA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAEAAA1-D5E4-4EB5-B1D7-6F964324CA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAEAAA1-D5E4-4EB5-B1D7-6F964324CA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAEAAA1-D5E4-4EB5-B1D7-6F964324CA92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B78096AB-3AF7-4B6C-85E1-EBBFF615DEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B78096AB-3AF7-4B6C-85E1-EBBFF615DEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B78096AB-3AF7-4B6C-85E1-EBBFF615DEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B78096AB-3AF7-4B6C-85E1-EBBFF615DEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
